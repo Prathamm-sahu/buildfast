@@ -27,8 +27,7 @@ const Navbar: FC<navbarProps> = ({}) => {
             <Search className="h-5 w-5" />
           </Button>
           <Button variant="ghost" size="icon" className="w-13">
-            <Globe />
-            <span className="">EN</span>
+            <span className="p-2">EN</span>
           </Button>
           <Button className="bg-[#1a1a1a] text-white hover:bg-[#333]">APPLY NOW</Button>
         </div>
