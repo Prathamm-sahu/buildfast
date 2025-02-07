@@ -98,16 +98,16 @@ const page: FC<pageProps> = ({}) => {
               <Link
                 key={event.href}
                 href={event.href}
-                className="border border-black rounded-lg p-6 flex items-center justify-between hover:bg-black/5 transition-colors"
+                className="border border-black rounded-md p-6 flex items-center justify-between hover:bg-black/5 transition-colors"
               >
                 <div className="flex items-center gap-6">
                   <div className="text-center w-20">
                     <div className="text-4xl font-bold">{event.date}</div>
                     <div className="text-sm">{event.day}</div>
                   </div>
+                  <div className='w-0 h-16 border border-black' />
                   <div>
-                    <h3 className="text-xl font-medium">{event.name}</h3>
-                    <p className="text-gray-600">{event.description}</p>
+                    <h3 className="text-xl font-medium">{event.name}: {event.description}</h3>
                   </div>
                 </div>
                 <div className="w-8 h-8 rounded-full border border-black flex items-center justify-center">
