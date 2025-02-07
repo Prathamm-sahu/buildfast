@@ -1,5 +1,4 @@
 import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
 import { PlusIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -61,9 +60,8 @@ const page: FC<pageProps> = ({}) => {
   ]
 
   return (
-    <div className="min-h-screen bg-[#f5e6d3]">
-      <Navbar />
-      <div className="max-w-4xl mx-auto px-4 py-8 my-16">
+    <div className="min-h-screen bg-[#f5e6d3] text-[#2C1810]">
+      <div className="max-w-[1450px] mx-auto px-4 py-24">
         <div className="border-b border-black pb-4">
           <div className="flex items-center justify-between">
             <h1 className="text-4xl font-serif">Past events</h1>
@@ -86,10 +84,10 @@ const page: FC<pageProps> = ({}) => {
         </div>
 
         <div className="mt-8 space-y-8">
-          {events.reduce((acc: JSX.Element[], event, index, array) => {
+          {events.reduce((acc: any, event, index, array) => {
             if (index === 0 || array[index - 1].month !== event.month) {
               acc.push(
-                <h2 key={`month-${event.month}`} className="text-xl font-medium mt-8 first:mt-0">
+                <h2 key={`month-${event.date}`} className="text-xl font-medium mt-8 first:mt-0">
                   {event.month}
                 </h2>,
               )
