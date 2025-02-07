@@ -8,15 +8,14 @@ interface pageProps {
 }
 
 const page: FC<pageProps> = ({}) => {
-  const images = Array(16).fill({
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pSEpUT8NSij5HeEfT12p5AQncVOgaB.png",
+  const images = Array(24).fill({
+    src: "/i1.jpg",
     alt: "Event photo showing people at a formal dining event",
   })
 
   return (
     <div className="min-h-screen bg-[#f5e6d3]">
-      <Navbar />
-      <div className="max-w-6xl mx-auto px-4 py-8 my-16">
+      <div className="max-w-[1450px] mx-auto px-4 py-24">
         <h1 className="text-3xl font-serif border-b border-black pb-4 mb-8">Event Name</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((image, i) => (
